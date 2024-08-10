@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
     <title>Shelvd - Your very own bookshelf</title>
 </head>
 <body>
@@ -23,23 +24,23 @@
             <div class="card">
                 <h4>ALL BOOKS</h4>
                 <div class="item">
-                    <h1>0</h1>
+                    <h1 id="allBooksNmbr">0</h1>
                     <i class="fa fa-archive fa-2x" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="card">
                 <h4>BOOKS READ</h4>
                 <div class="item">
-                    <h1>0</h1>
+                    <h1 id="booksReadNmbr">0</h1>
                     <i class="fa fa-check-square fa-2x" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="btns">
-                <button>
+                <button id="newBookBtn">
                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                     New Book
                 </button>
-                <button>
+                <button id="delAllBtn">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                     Delete All
                 </button>
@@ -48,9 +49,24 @@
         </div>
 
         <main class="main-section">
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card info">
+                <i class="fa fa-info fa-lg" aria-hidden="true"></i>
+                <p>All added books will show up here.</p>
+            </div>
         </main>
     </div>
+
+    <dialog id="newBookDialog">
+        <form>
+            <label for="Title">Book Title:*</label>
+            <input type="text" name="Title" required placeholder="ex: Harry Potter and the Philosopher's Stone">
+            <label for="Author">Author Name:*</label>
+            <input type="text" name="Author" required placeholder="ex: J.K. Rowling">
+            <label for="Cover">Link to book cover image:</label>
+            <input type="url" name="Cover" placeholder="https://...">(Optional)
+            <label for="Status">Have you read the book?*</label>
+            <input type="checkbox" name="Status" required>
+        </form>
+    </dialog>  
 </body>
 </html>

@@ -101,18 +101,19 @@ a {
     font-size: 1.2em;
 
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
 
     height: 100%;
     width: 100%;
 
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+
 }
 
 .container .top-section .btns button:hover {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 .container .main-section {
     display: grid;
@@ -129,11 +130,39 @@ a {
     height: 600px;
 }
 
-/*.container .main-section .card {
-    border: 1px solid red;
-
+.container .main-section .card {
     width: 150px;
     height: 200px;
-}*/
+}
+
+.container .main-section .info {
+    border: 2px dashed var(--secondary-color);
+}
+
+.container .main-section .card i {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    
+    margin: 0.4em;
+    padding: 0.3em 0.5em;
+
+    border-radius: 5px;
+}
+
+.container .main-section .card p {
+    color: var(--secondary-color);
+
+    font-size: 1.5em;
+
+    margin-top: 0.5em;
+
+    text-align: center;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+
 
 
