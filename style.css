@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+:root {
+    --text-font: 'Crimson Text';
+    --primary-color: black;
+    --secondary-color: burlywood;
+    --background: beige;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: var(--text-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-image: url("assets/background-img1.jpg");
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    background-color: var(--background);
+}
+
+.container .navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    font-size: 2em;
+    font-weight: 700;
+
+    color: var(--secondary-color);
+
+    border-top: 5px solid var(--secondary-color);
+    border-bottom: 10px solid var(--secondary-color);
+}
+
+.container .navbar .logo a {
+    color: var(--secondary-color);
+    
+}
+
+.container .navbar .link a {
+    color: var(--primary-color);
+}
+
+.container .top-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+
+    margin: 3em 4em;
+
+    gap: 2em;
+}
+
+.container .top-section .card {
+    background-color: var(--background);
+    
+    padding: 2em 4em;
+
+    border-radius: 30px;
+}
+
+.container .top-section .card .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .top-section .btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em
+}
+
+.container .top-section .btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    font-size: 1.2em;
+
+    border: none;
+    border-radius: 30px;
+
+    height: 100%;
+    width: 100%;
+
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.container .top-section .btns button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+.container .main-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 1em;
+
+    backdrop-filter: brightness(30%);
+
+    margin: 3em 4em;
+    padding: 2em;
+
+    border-radius: 30px;
+    
+    height: 600px;
+}
+
+/*.container .main-section .card {
+    border: 1px solid red;
+
+    width: 150px;
+    height: 200px;
+}*/
+
+
