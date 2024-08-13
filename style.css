@@ -159,9 +159,188 @@ a {
     text-align: center;
 }
 
+dialog {
+    margin: auto;
+    
+    width : 50%;
+    height: 50%;
+
+    border: none;
+    border-radius: 10px;
+    background-color: var(--background);
+
+}
+
 dialog::backdrop {
     backdrop-filter: blur(5px);
 }
+
+dialog form {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+dialog form .item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+
+    margin: 0em 4em 1em 4em;
+
+    font-weight: 700;
+}
+
+dialog form .item label i {
+    font-weight: 400;
+}
+
+dialog form .item input {
+    line-height: 2em;
+
+    outline: none;
+
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+
+    background: transparent;
+
+    padding: 0.2em 0.5em;
+}
+
+dialog form .item input:placeholder-shown {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+dialog form .item input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+dialog form .item input:user-invalid {
+    border: 1px solid red;
+}
+
+dialog form .item input:user-valid {
+    border: 1px solid green;
+}
+
+dialog form .item .checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+dialog form .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    margin: 0em 4em 1em 4em;
+}
+
+dialog form .btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    font-size: 1em;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 5px;
+
+    height: 100%;
+    width: 100%;
+
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+
+    position: relative;
+
+    border-radius: 5px;
+
+    transition: 0.5s ease-in;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+}
+
+.toggle .checkbox {
+    appearance: none;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+
+    width: 88px;
+    height: 30px;
+
+    border-radius: 6px;
+    
+    cursor: pointer;
+    
+}
+
+.toggle .knob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: lightgray;
+
+    width: 50px;
+    height: 26px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+   
+    position: absolute;
+    right: 36px;
+    
+    cursor: pointer;
+
+    z-index: -1;
+}
+
+.toggle .checkbox:checked + .knob {
+    translate: 35px;
+
+    border: 1px solid var(--primary-color);
+
+    background-color: green;
+}
+
+.toggle .checkbox:checked + .knob p {
+    display: none;
+}
+
+.toggle .checkbox:checked + .knob:after {
+    content: "Read";
+    color: white;
+}
+
+.toggle .checkbox:focus,
+.toggle .checkbox:user-invalid,
+.toggle .checkbox:user-valid {
+    border: 2px solid var(--primary-color)
+}
+
+
+
+
 
 
 
