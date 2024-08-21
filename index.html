@@ -60,21 +60,21 @@
         <form>
             <div class="item">
                 <label for="Title">Book Title: *</label>
-                <input type="text" name="Title" required placeholder="ex: Harry Potter and the Philosopher's Stone">
+                <input type="text" name="Title" id="titleUserInput" placeholder="ex: Harry Potter and the Philosopher's Stone" required>
             </div>
             <div class="item">
                 <label for="Author">Author Name: *</label>
-                <input type="text" name="Author" required placeholder="ex: J.K. Rowling">
+                <input type="text" name="Author" id="authorUserInput" placeholder="ex: J.K. Rowling" required>
             </div>
             <div class="item">
                 <label for="Cover">Link to book cover image: <i>(Optional)</i></label>
-                <input type="url" name="Cover" placeholder="https://...">
+                <input type="url" name="Cover" id="urlUserInput" placeholder="https://...">
             </div>
             <div class="item">
                 <label for="Status" class="checkbox-label">
-                    Have you read the book ? * &nbsp;
+                    Have you read the book ? &nbsp;
                     <div class="toggle">
-                        <input type="checkbox" class="checkbox" name="Status" required>
+                        <input type="checkbox" name="Status" id="statusUserInput" class="checkbox">
                         <div class="knob">
                             <p>Not Read</p>
                         </div>
@@ -87,7 +87,7 @@
                     Confirm
                 </button>
                 <button id="cancelBtn">
-                    <i class="fa fa-ban" aria-hidden="true"></i>
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
                     Cancel
                 </button>
             </div>
