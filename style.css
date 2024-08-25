@@ -119,29 +119,29 @@ a {
 }
 .container .main-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 150px);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fill, 180px);
+    gap: 2em;
+
+    align-items: center;
+    justify-content: center;
 
     backdrop-filter: brightness(30%);
 
     margin: 3em 4em;
-    padding: 2em;
+    padding: 2em 0;
 
-    border-radius: 30px;
-    
-    height: 600px;
+    border-radius: 30px; 
 }
 
 .container .main-section .card {
-    width: 150px;
-    height: 200px;
+    height: 240px;
 }
 
 .container .main-section .info {
     border: 2px dashed var(--secondary-color);
 }
 
-.container .main-section .card i {
+.container .main-section .info i {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     
@@ -151,14 +151,33 @@ a {
     border-radius: 5px;
 }
 
-.container .main-section .card p {
+.container .main-section .info p {
     color: var(--secondary-color);
 
     font-size: 1.5em;
 
     margin-top: 0.5em;
+    padding: 0 1em;
 
     text-align: center;
+}
+
+.container .main-section .book {
+    border: 2px solid var(--secondary-color);
+    border-left: 10px solid var(--secondary-color);
+    background-color: var(--background);
+}
+
+.container .main-section .book h2 {
+    text-align: center;
+
+    padding: 2em 0.5em;
+}
+
+.container .main-section .book p {
+    text-align: right;
+
+    padding: 0.2em 0.2em;
 }
 
 dialog {
