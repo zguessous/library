@@ -16,7 +16,7 @@ const mainSection = document.querySelector("main");
 
 let index = 0;
 const myLibrary = [];
-const bookCardDiv = [];
+const bookItemDivs = [];
 
 // Event Listeners
 
@@ -50,27 +50,58 @@ function Book (title, author, url, status) {
 function addBookToLibrary (book) {
     myLibrary.push(book);
 
-    const div = document.createElement("div");
-    div.classList.add("card","book");
-    div.setAttribute("id", index);
+    const itemDiv = document.createElement("div");
+    
+    const cardDiv = document.createElement("div");
+    const buttonsDiv = document.createElement("div");
+    
+    const boxDiv = document.createElement("div");
+    const toggleDiv = document.createElement("div");
+    const checkboxInput = document.createElement("input");
+    const knobDiv = document.createElement("div");
+    const pKnob = document.createElement("p");
+    const button = document.createElement("button");
+    const delIcon = document.createElement("i");
+
+    cardDiv.classList.add("card","book");
+    cardDiv.setAttribute("id", index);
     if (book.url === "") {
         const h2 = document.createElement("h2");
         const p = document.createElement("p");
         h2.textContent = book.title;
         p.textContent = "by "+book.author;
-        div.appendChild(h2);
-        div.appendChild(p);
+        cardDiv.appendChild(h2);
+        cardDiv.appendChild(p);
     } else {
         const img = document.createElement("img");
         img.setAttribute("src", book.url);
         img.setAttribute("alt", book.title+" by "+book.author);
         img.setAttribute("title", book.title+" by "+book.author);
-        img.style.width = "170px";
-        img.style.height = "240px";
-        div.appendChild(img);
+        cardDiv.appendChild(img);
     }
-    mainSection.appendChild(div);
-    bookCardDiv.push(div);
+
+    buttonsDiv.classList.add("btns");
+    toggleDiv.classList.add("toggle");
+    checkboxInput.classList.add("checkbox");
+    checkboxInput.type = "checkbox";
+    checkboxInput.checked = book.status;
+    knobDiv.classList.add("knob");
+    pKnob.textContent = "Not Read";
+    delIcon.setAttribute("class", "fa fa-trash-o");
+
+    itemDiv.appendChild(cardDiv);
+    itemDiv.appendChild(buttonsDiv);
+    buttonsDiv.appendChild(boxDiv);
+    buttonsDiv.appendChild(button);
+    boxDiv.appendChild(toggleDiv);
+    toggleDiv.appendChild(checkboxInput);
+    toggleDiv.appendChild(knobDiv);
+    knobDiv.appendChild(pKnob);
+    button.appendChild(delIcon);
+    
+    
+    mainSection.appendChild(itemDiv);
+    bookItemDivs.push(cardDiv);
     index++;
 }
 
